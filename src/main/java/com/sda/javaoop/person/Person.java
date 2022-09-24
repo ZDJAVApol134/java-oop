@@ -1,5 +1,7 @@
 package com.sda.javaoop.person;
 
+import com.sda.javaoop.enums.UserRole;
+
 import java.util.Objects;
 
 public class Person {
@@ -7,13 +9,13 @@ public class Person {
     private int age;
     private String firstName;
     private String lastName;
-    private String gender;
+    private Gender gender;
 
     public Person() {
 
     }
 
-    public Person(String firstName, String lastName, int age, String gender) {
+    public Person(String firstName, String lastName, int age, Gender gender) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -44,11 +46,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public String getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
@@ -58,9 +60,9 @@ public class Person {
 
     @SuppressWarnings("all")
     public boolean isRetired() {
-        if ("MALE".equalsIgnoreCase(gender)) {
+        if (Gender.MALE.equals(gender)) {
             return age > 67;
-        } else if ("FEMALE".equalsIgnoreCase(gender)) {
+        } else if (Gender.FEMALE.equals(gender)) {
             return age > 65;
         } else {
         }

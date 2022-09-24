@@ -7,14 +7,14 @@ public class Main {
         person1.setFirstName("Jan");
         person1.setLastName("Kowlski");
         person1.setAge(30);
-        person1.setGender("MALE");
+        person1.setGender(Gender.MALE);
 
         Person person2 = new Person();
         person2.setFirstName("Jan");
         person2.setLastName("Kowlski");
         person2.setAge(30);
-        person2.setGender("MALE");
-        Person person3 = new Person("Kasia", "Kowalska", 28, "FEMALE");
+        person2.setGender(Gender.MALE);
+        Person person3 = new Person("Kasia", "Kowalska", 28, Gender.FEMALE);
 
         System.out.println("person1 equals person2 = " + person1.equals(person2));
         System.out.println("person2 equals person3 = " + person2.equals(person3));
