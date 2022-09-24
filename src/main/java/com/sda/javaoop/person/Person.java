@@ -1,4 +1,4 @@
-package com.sda.javaoop;
+package com.sda.javaoop.person;
 
 import java.util.Objects;
 
